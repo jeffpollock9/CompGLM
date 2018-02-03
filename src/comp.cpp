@@ -138,7 +138,7 @@ void checkInputs(NumericVector lam, NumericVector nu) {
 //' @export
 // [[Rcpp::export]]
 NumericVector dcomp(IntegerVector y, NumericVector lam, NumericVector nu,
-		int sumTo = 100, bool logP = false) {
+                    int sumTo = 100, bool logP = false) {
 
 	checkInputs(lam, nu);
 
@@ -186,7 +186,7 @@ NumericVector dcomp(IntegerVector y, NumericVector lam, NumericVector nu,
 //' @export
 // [[Rcpp::export]]
 NumericVector pcomp(IntegerVector q, NumericVector lam, NumericVector nu,
-		int sumTo = 100, bool lowerTail = true, bool logP = false) {
+                    int sumTo = 100, bool lowerTail = true, bool logP = false) {
 
 	checkInputs(lam, nu);
 

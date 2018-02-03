@@ -4,5 +4,3 @@
 *.o
 *.so
 *.gcda
-NAMESPACE
-*RcppExports*
