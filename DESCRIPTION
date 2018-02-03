@@ -15,5 +15,7 @@ Description: The package contains a function (which uses a similar interface to
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.2), stats
 LinkingTo: Rcpp
-Suggests: RUnit
+Suggests: testthat, devtools, roxygen2, covr
 NeedsCompilation: yes
+RoxygenNote: 6.0.1
+

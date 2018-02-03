@@ -1,9 +1,0 @@
-RUNIT TEST PROTOCOL -- Fri Jul  4 14:12:18 2014 
-*********************************************** 
-Number of test functions: 3 
-Number of errors: 0 
-Number of failures: 0 
-
- 
-1 Test Suite : 
-CompGLM unit testing - 3 test functions, 0 errors, 0 failures

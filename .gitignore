@@ -1,0 +1,8 @@
+*~
+*#
+*.Rd
+*.o
+*.so
+*.gcda
+NAMESPACE
+*RcppExports*
