@@ -1,3 +1,4 @@
+
 #' @export
 print.Comp <- function(x, ...) {	
     cat("\nCall:\n")
@@ -26,15 +27,24 @@ summary.Comp <- function(object, ...) {
     tValuesBeta <- betaCoefs / seBeta
     tValuesZeta <- zetaCoefs / seZeta
     
-    coefTableBeta <- cbind(Estimate = betaCoefs, Std.Error = seBeta, t.value = tValuesBeta, 
+    coefTableBeta <- cbind(Estimate = betaCoefs,
+                           Std.Error = seBeta,
+                           t.value = tValuesBeta, 
                            p.value = 2.0 * pt(-abs(tValuesBeta), df = object$df.residual))
-    coefTableZeta <- cbind(Estimate = zetaCoefs, Std.Error = seZeta, t.value = tValuesZeta, 
+
+    coefTableZeta <- cbind(Estimate = zetaCoefs,
+                           Std.Error = seZeta,
+                           t.value = tValuesZeta, 
                            p.value = 2.0 * pt(-abs(tValuesZeta), df = object$df.residual))
     
-    res <- list(call = object$call, beta = coefTableBeta, zeta = coefTableZeta, 
-                AIC = AIC(object), logLik = object$logLik)
+    res <- list(call = object$call,
+                beta = coefTableBeta,
+                zeta = coefTableZeta, 
+                AIC = AIC(object),
+                logLik = object$logLik)
     
     class(res) <- "summary.Comp"
+
     return(res)
 }
 
@@ -43,11 +53,17 @@ print.summary.Comp <- function(x, ...) {
     cat("\nCall:\n")
     print(x$call)
     cat("\nBeta:\n")
-    printCoefmat(x$beta, P.values = TRUE, has.Pvalue = TRUE, 
-                 signif.stars = TRUE, signif.legend = FALSE)
+    printCoefmat(x$beta,
+                 P.values = TRUE,
+                 has.Pvalue = TRUE, 
+                 signif.stars = TRUE,
+                 signif.legend = FALSE)
     cat("\nZeta:\n")
-    printCoefmat(x$zeta, P.values = TRUE, has.Pvalue = TRUE, 
-                 signif.stars = TRUE, signif.legend = TRUE)
+    printCoefmat(x$zeta,
+                 P.values = TRUE,
+                 has.Pvalue = TRUE, 
+                 signif.stars = TRUE,
+                 signif.legend = TRUE)
     cat("\nAIC:", x$AIC, "\n")
     cat("Log-Likelihood:", x$logLik, "\n")
     invisible(x)
