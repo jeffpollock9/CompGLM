@@ -1,4 +1,3 @@
-#' @useDynLib CompGLM
 
 #' @title Conway-Maxwell Poisson GLM Fitting Function
 #'
@@ -65,6 +64,10 @@
 #' coef(model)
 #' head(predict(model))
 #' AIC(model)
+#' @useDynLib CompGLM
+#' @import Rcpp
+#' @importFrom stats glm.fit model.frame model.matrix model.offset
+#'     model.response optim poisson
 #' @export glm.comp
 glm.comp <- function(lamFormula,
                      nuFormula = NULL,

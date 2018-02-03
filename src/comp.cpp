@@ -1,6 +1,5 @@
 #include "Rcpp.h"
 
-// [[Rcpp::depends(Rcpp)]]
 using namespace Rcpp;
 
 double factorial(int x) {

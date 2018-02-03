@@ -1,4 +1,7 @@
 
+#' @importFrom stats printCoefmat pt AIC nobs delete.response model.matrix
+#'     model.frame
+
 #' @export
 print.Comp <- function(x, ...) {	
     cat("\nCall:\n")
@@ -75,7 +78,6 @@ vcov.Comp <- function(object, ...) {
     return(vcov)
 }
 
-#' @importFrom stats nobs
 #' @export
 logLik.Comp <- function(object, ...) {	
     ans <- object$logLik
@@ -104,7 +106,6 @@ nobs.Comp <- function(object, ...) {
     return(object$nobs)
 }
 
-#' @importFrom stats nobs
 #' @export
 predict.Comp <- function(object, newdata, ...) {
     
