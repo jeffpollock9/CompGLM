@@ -1,5 +1,3 @@
-#' @importFrom stats nobs
-#' @importFrom Rcpp evalCpp
 #' @useDynLib CompGLM
 
 #' @title Conway-Maxwell Poisson GLM Fitting Function
@@ -68,8 +66,14 @@
 #' head(predict(model))
 #' AIC(model)
 #' @export glm.comp
-glm.comp <- function(lamFormula, nuFormula = NULL, data, lamStart = NULL, nuStart = NULL,
-                     sumTo = 100L, method = "BFGS", ...) {
+glm.comp <- function(lamFormula,
+                     nuFormula = NULL,
+                     data,
+                     lamStart = NULL,
+                     nuStart = NULL,
+                     sumTo = 100L,
+                     method = "BFGS",
+                     ...) {
 
     call <- match.call()
 
