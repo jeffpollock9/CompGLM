@@ -1,2 +1,13 @@
 # CompGLM
-Conway-Maxwell-Poisson GLM and distribution functions
+
+To install from source:
+
+```bash
+make
+```
+
+To install from CRAN:
+
+```R
+install.packages("CompGLM")
+```
