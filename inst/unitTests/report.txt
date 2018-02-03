@@ -1,0 +1,24 @@
+RUNIT TEST PROTOCOL -- Fri Jul  4 14:12:18 2014 
+*********************************************** 
+Number of test functions: 3 
+Number of errors: 0 
+Number of failures: 0 
+
+ 
+1 Test Suite : 
+CompGLM unit testing - 3 test functions, 0 errors, 0 failures
+
+
+
+Details 
+*************************** 
+Test Suite: CompGLM unit testing 
+Test function regexp: ^test.+ 
+Test file regexp: ^runit.+\.[rR]$ 
+Involved directory: 
+/home/jeff/workspace/CompGLM/tests/../inst/unitTests 
+--------------------------- 
+Test file: /home/jeff/workspace/CompGLM/tests/../inst/unitTests/runit.comp.R 
+test.dcomp: (8 checks) ... OK (0 seconds)
+test.glm.comp: (2 checks) ... OK (7.26 seconds)
+test.pcomp: (8 checks) ... OK (0 seconds)
