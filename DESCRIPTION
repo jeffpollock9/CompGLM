@@ -17,7 +17,7 @@ Description: A function (which uses a similar interface to the `glm' function)
 License: GPL (>= 2)
 Imports: Rcpp, stats
 LinkingTo: Rcpp
-Suggests: testthat, devtools, roxygen2, covr
+Suggests: testthat, devtools, roxygen2, covr, lintr
 NeedsCompilation: yes
 Encoding: UTF-8
 RoxygenNote: 6.0.1

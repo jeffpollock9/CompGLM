@@ -3,3 +3,5 @@
 Makefile
 ^.*\.Rproj$
 ^\.Rproj\.user$
+\.lintr
+\.travis\.yml

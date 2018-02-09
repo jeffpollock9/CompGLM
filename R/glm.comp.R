@@ -66,9 +66,10 @@
 #' AIC(model)
 #' @useDynLib CompGLM
 #' @import Rcpp
+#' @export
 #' @importFrom stats glm.fit model.frame model.matrix model.offset
 #'     model.response optim poisson
-#' @export glm.comp
+#'
 glm.comp <- function(lamFormula,
                      nuFormula = NULL,
                      data,
@@ -90,7 +91,7 @@ glm.comp <- function(lamFormula,
     y <- model.response(lamModelFrame)
     nobs <- NROW(y)
 
-    if(any(y + 10 > sumTo)) {
+    if (any(y + 10 > sumTo)) {
         stop("Response within 10 of 'sumTo' argument")
     }
 
@@ -129,10 +130,10 @@ glm.comp <- function(lamFormula,
         stop("attempt to fit poisson glm with glm.fit failed")
     }
     if (any(is.na(coefs))) {
-        badVariables = paste(names(coefs)[is.na(coefs)], collapse = ", ")
+        badVariables <- paste(names(coefs)[is.na(coefs)], collapse = ", ")
         warning(sprintf("initial parameter return NA from glm.fit, dropping: %s",
                         badVariables))
-        xLam <- xLam[ , !is.na(coefs), drop = FALSE]
+        xLam <- xLam[, !is.na(coefs), drop = FALSE]
     }
 
     if (is.null(lamStart)) {
@@ -173,8 +174,9 @@ glm.comp <- function(lamFormula,
 
         betaGrad <- t(xLam) %*% (y - Y(lam, nu, sumTo) / Z(lam, nu, sumTo))
 
-        zetaGrad <- t(xNu) %*% ((-log(factorial(y)) + W(lam, nu, sumTo) /
-                                 Z(lam, nu, sumTo)) * nu)
+        zetaGrad <- t(xNu) %*% (
+            (-log(factorial(y)) + W(lam, nu, sumTo) /
+                 Z(lam, nu, sumTo)) * nu)
 
         out[lamIndexes] <- betaGrad
         out[nuIndexes] <- zetaGrad

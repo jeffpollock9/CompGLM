@@ -1,0 +1,7 @@
+linters: with_defaults(
+    object_usage_linter = NULL,
+    camel_case_linter = NULL,
+    line_length_linter(100),
+    absolute_paths_linter = NULL
+    )
+exclusions: list('R/RcppExports.R')
