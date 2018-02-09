@@ -11,6 +11,6 @@ test_that("pcomp matches ppois with nu = 1", {
 })
 
 test_that("pcomp throws", {
-    expect_error(pcomp(1, -1, 2), silent = TRUE)
-    expect_error(pcomp(1, 1, -2), silent = TRUE)
+    expect_error(pcomp(1, -1, 2))
+    expect_error(pcomp(1, 1, -2))
 })
