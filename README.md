@@ -1,4 +1,6 @@
-# CompGLM
+# CompGLM 
+
+## Installation
 
 To install from source:
 
