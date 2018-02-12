@@ -1,4 +1,6 @@
-# CompGLM 
+[![Build Status](https://travis-ci.org/jeffpollock9/CompGLM.svg?branch=master)](https://travis-ci.org/jeffpollock9/CompGLM)
+
+# CompGLM
 
 ## Installation
 
